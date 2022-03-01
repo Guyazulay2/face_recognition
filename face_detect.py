@@ -3,10 +3,10 @@ import cv2
 import numpy as np
 from time import sleep
 
-video_capture = cv2.VideoCapture(2)
+video_capture = cv2.VideoCapture(0)
 
-obama_image = face_recognition.load_image_file("guy.jpg")
-obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
+# obama_image = face_recognition.load_image_file("guy.jpg")
+# obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
 
 biden_image = face_recognition.load_image_file("beni.jpg")
 biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
@@ -16,13 +16,11 @@ barak_image = face_recognition.load_image_file("Obama.jpg")
 barak_face_encoding = face_recognition.face_encodings(barak_image)[0]
 # Create arrays of known face encodings and their names
 known_face_encodings = [
-    obama_face_encoding,
     biden_face_encoding,
     barak_face_encoding
 ]
 
 known_face_names = [
-    "guy",
     "beni",
     "Obama"
 ]
